@@ -14,8 +14,14 @@ ENTRY = (
 
 ENTRY_PATH = Path("/output/entry.txt")
 
+MAX_CHARS = 220
+
 
 def main() -> None:
+    if len(ENTRY) > MAX_CHARS:
+        raise ValueError(f"entry too long: {len(ENTRY)} chars > {MAX_CHARS}")
+    if ENTRY.count(".") != 1 or not ENTRY.endswith("."):
+        raise ValueError("entry must be exactly one sentence ending with a period")
     ENTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
     ENTRY_PATH.write_text(ENTRY, encoding="utf-8")
 
