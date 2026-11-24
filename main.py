@@ -1,11 +1,15 @@
-"""One-sentence absurd invention pitch: a remote control that hides."""
+"""One-sentence absurd invention pitch.
+
+The invention: a shower head that turns warm water into a rental
+agreement and kicks you out mid-shampoo when the meter runs dry.
+"""
 
 from pathlib import Path
 
 ENTRY = (
-    "A remote control that hides under the sofa every time someone says "
-    "'just one more episode', and only comes out after a written promise "
-    "to go to bed."
+    "A shower head that bills you rent for every second of warm water you "
+    "waste deciding on a temperature, and evicts you mid-shampoo when the "
+    "balance hits zero."
 )
 
 ENTRY_PATH = Path("/output/entry.txt")
